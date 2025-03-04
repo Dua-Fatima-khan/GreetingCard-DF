@@ -124,8 +124,8 @@ Your impact lasts a lifetime. You are truly appreciated!"""
         greeting_font = ImageFont.truetype("times.ttf", 80)  # Large font for greeting
         quote_font = ImageFont.truetype("times.ttf", 40)  # Smaller font for quote
     except:
-        st.error("Font not available. Please check your font files.")
-        return None
+         greeting_font = ImageFont.load_default()
+         quote_font = ImageFont.load_default()  
 
     greeting = messages[occasion]["greeting"]
     quote = messages[occasion]["quote"]
